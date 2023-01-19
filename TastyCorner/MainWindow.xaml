@@ -1,0 +1,134 @@
+﻿<Window x:Class="TastyCorner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TastyCorner"
+        mc:Ignorable="d"
+
+        Title="Авторизация" MaxHeight="750" MaxWidth="600"
+                            MinHeight="750" MinWidth="600" Icon="Graphicloads-Colorful-Long-Shadow-Restaurant.ico" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="#FFD6D6D6">
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="200"/>
+
+            <RowDefinition Height="75"/>
+
+            <RowDefinition Height="208"/>
+            <RowDefinition Height="74"/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+            
+            <Image Source="Resources/Graphicloads-Colorful-Long-Shadow-Restaurant.ico"
+                   Margin="20"/>
+
+            <TextBlock Grid.Column="1"
+                       Margin="5"
+                       FontSize="50"
+                       Foreground="#FF3AB7A6"
+                       VerticalAlignment="Center">
+                <Run Text="Ресторан"/><LineBreak/><Run Text="TASTY CORNER"/>
+            </TextBlock>
+
+        </Grid>
+
+
+
+        <Grid Grid.Row="1"
+                            Background="#FFD6D6D6">
+
+            <Label Content="Авторизация"
+                       HorizontalAlignment="Center"/>
+
+        </Grid>
+
+
+
+        <Grid Grid.Row="2">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+
+            <TextBox Grid.Column="1"
+                         Grid.Row="1"
+                         x:Name="txtPassword" Height="50"
+                     Width="300"/>
+
+            <Label Content="Логин"
+                   Grid.Column="0"
+                   Grid.Row="0"
+                   x:Name="Login"/>
+
+            <TextBox Grid.Column="1"
+                     Grid.Row="0"
+                     Background="White"
+                     x:Name="txtLogin" 
+                     Height="50"
+                     Width="300"/>
+
+            <Label Content="Пароль"
+                   Grid.Column="0"
+                   Grid.Row="1"
+                   x:Name="lblPassword"/>
+
+
+            <PasswordBox Grid.Column="1"
+                         Grid.Row="1"
+                         x:Name="pswPassword" 
+                         Height="50"
+                         Width="300"/>
+
+        </Grid>
+
+        <CheckBox Grid.Row="3"
+                  Content="Показать пароль"
+                  Click="CheckBox_Click"
+                  FontSize="28"
+                  x:Name="chkShow" Height="32" Width="258"/>
+
+        <StackPanel Grid.Row="4"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center" 
+                    Width="480">
+
+            <Button x:Name="btnExit" 
+                    Content="Закрыть"
+                    Height="70"
+                    Foreground="#FFD6D6D6"
+                    Background="#FF3AB7A6"
+                    IsCancel="True" Click="btnExit_Click"/>
+            <Button x:Name="btnOrder"
+                Content="Вход"
+                    Background="#FFD6D6D6"
+                    Height="70"
+                    Foreground="#FF3AB7A6" Click="btnOrder_Click"
+                    IsDefault="True"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

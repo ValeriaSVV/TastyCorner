@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31829.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TastyCorner", "TastyCorner\TastyCorner.csproj", "{B252B4BD-7810-4FA7-BF6D-BBE1BCAF231D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B252B4BD-7810-4FA7-BF6D-BBE1BCAF231D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B252B4BD-7810-4FA7-BF6D-BBE1BCAF231D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B252B4BD-7810-4FA7-BF6D-BBE1BCAF231D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B252B4BD-7810-4FA7-BF6D-BBE1BCAF231D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6580CB8F-6074-4E4F-85B6-22903327122C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,133 @@
+﻿<Window x:Class="TastyCorner.Order"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TastyCorner"
+        mc:Ignorable="d"
+        Title="Order" Height="600" Width="900">
+
+    <Grid
+              Background="#FFD6D6D6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Grid.Column="0"  
+                   Source="Resources/Graphicloads-Colorful-Long-Shadow-Restaurant.ico"
+                   Margin="10"/>
+        <Label Grid.Column="1" 
+                   Content="TASTY CORNER Меню"
+                   FontSize="42" />
+        <Grid Grid.Column="0"
+                Grid.Row="1" Margin="-2,0,2,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label x:Name="lblUser"
+                   FontSize="18"
+                   HorizontalAlignment="Center"/>
+
+            <UniformGrid Grid.Row="2" Rows="2"/>
+        </Grid>
+
+        <Grid Grid.Row="1"
+              Grid.Column="1"
+              Background="#FFD6D6D6">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Source="Resources/mash.jpg"/>
+                <CheckBox x:Name="chkMash" Content="Жульен" 
+                           Grid.Row="1"
+                           Style="{StaticResource name}"/>
+                <TextBox x:Name="txtMash" Text="470 р." 
+                           Grid.Row="2"
+                           Style="{StaticResource price}" />
+            </Grid>
+
+            <Grid Margin="10" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Source="Resources/soup.jpg"/>
+                <CheckBox x:Name="chkSoup" Content="Суп" 
+                           Grid.Row="1"
+                           Style="{StaticResource name}"/>
+                <TextBox x:Name="txtSoup" Text="320 р." 
+                           Grid.Row="2"
+                           Style="{StaticResource price}" />
+            </Grid>
+
+            <Grid Margin="10" Grid.Column="1" Grid.Row="1">
+                <Button Content="Назад"
+                    FontSize="28"
+                        IsCancel="True"
+                        Foreground="#FFD6D6D6"
+                    Background="#FF3AB7A6"
+                    Height="50"
+                    Width="160" 
+                    Click="Button_Click" Margin="51,120,0,0" VerticalAlignment="Top"/>
+            </Grid>
+
+            <Grid Margin="10" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Source="Resources/tiramisu.jpg"/>
+                <CheckBox x:Name="chkTiramisu" Content="Тирамису" 
+                           Grid.Row="1"
+                           Style="{StaticResource name}"/>
+                <TextBox x:Name="txtTiramisu" Text="550 р." 
+                           Grid.Row="2"
+                           Style="{StaticResource price}" />
+            </Grid>
+
+            <Grid Margin="10" Grid.Row="1">
+                <Label 
+                   Content="Cпособ оплаты"
+                   FontSize="25" Margin="0,64,26,100" />
+                <ComboBox Margin="0,10,10,140" Background="White">
+                    <TextBlock>Карта</TextBlock>
+                    <TextBlock>Наличные</TextBlock>
+                </ComboBox>
+            </Grid>
+
+            <Grid Margin="10" Grid.Column="2" Grid.Row="2">
+                <Button x:Name="btnOrder" Content="Заказать"
+                        FontSize="28"
+                        Height="50"
+                        IsDefault="True"
+                        Width="160"
+                        Foreground="#FF3AB7A6" Click="btnOrder_Click" Margin="41,120,10,34" IsCancel="True"/>
+
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>
